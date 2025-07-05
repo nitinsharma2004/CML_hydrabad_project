@@ -1,0 +1,132 @@
+body, html {
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e6f4ea 0%, #d1fae5 100%) !important;
+}
+
+/* App-wide container and main content styles for full width and alignment */
+.app-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #f0f9f0 0%, #e0ffe6 100%);
+}
+
+.main-content {
+  width: 100vw;
+  min-height: calc(100vh - 80px);
+  padding-top: 80px; /* Space for fixed navbar */
+  padding-bottom: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  box-sizing: border-box;
+  background: none;
+}
+
+.main-content.no-navbar {
+  padding-top: 0; /* No padding when navbar is hidden */
+  min-height: 100vh;
+}
+
+/* Keep only custom styles for cards, alerts, etc. */
+.dashboard-card, .card, .section, .about-section, .market-section, .schemes-section {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+}
+
+.weather-alert {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.contact-info-panel {
+  background: #f5f6fa;
+  color: #222;
+}
+.contact-info-panel h2,
+.contact-info-panel p,
+.contact-info-panel a {
+  color: #222 !important;
+}
+.contact-info-panel .text-indigo-600,
+.contact-info-panel .text-indigo-800 {
+  color: #2563eb !important;
+}
+
+.contact-form-panel {
+  background: #fff;
+  color: #111;
+}
+.contact-form-panel input,
+.contact-form-panel textarea {
+  background: #fff;
+  color: #111;
+  border: 1px solid #d1d5db;
+}
+.contact-form-panel input::placeholder,
+.contact-form-panel textarea::placeholder {
+  color: #888;
+}
+
+.schemes-section, .schemes-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 0 auto 2rem auto;
+  padding: 0;
+}
+.schemes-section .card, .schemes-grid .card {
+  margin-bottom: 0;
+}
+
+.card, .dashboard-card, .section, .about-section, .market-section {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  color: #222;
+}
+
+input, textarea, select, .form-field {
+  background: #fff !important;
+  color: #111 !important;
+  border: 1px solid #d1d5db;
+}
+input::placeholder, textarea::placeholder, select::placeholder {
+  color: #888 !important;
+}
+
+/* Ensure login page takes full viewport */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f9f0 0%, #e0ffe6 100%);
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
